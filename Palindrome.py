@@ -1,9 +1,8 @@
 def palindrome(inp):
-    length = len(str(inp))
-    i = 0
-    for x in inp:
-        i += 1
-        if not x == inp[length - i]:
-            return False
-        elif i == round(length / 2):
-            return True
+    rev = inp[::-1]
+    if inp == rev:
+        return True
+    else:
+        return False
+pal = input("Enter Your Palindrome: ")
+print(palindrome(pal))
